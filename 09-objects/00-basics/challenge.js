@@ -21,26 +21,15 @@ module.exports.formLetter = function(letter){
 
 module.exports.canIGet = function(item, money){
 
-    /*
     var applestore = {
-        MacBook Air: 999,
-        MacBook Pro: 1299,
-        Mac Pro: 2499,
-        Apple Sticker: 1
+        'MacBook Air': 999,
+        'MacBook Pro': 1299,
+        'Mac Pro': 2499,
+        'Apple Sticker': 1
     };
-    */
 
-    if ((item === 'Apple Sticker') && (money >= 1)) {
-      return true;
-    } else if ((item === 'Mac Pro') && (money >= 2499)) {
-      return true;
-    } else if ((item === 'MacBook Air') && (money >= 999)) {
-      return true;
-    } else if ((item === 'MacBook Pro') && (money >= 1299)) {
-      return true;
-    } else {
-      return false;
-    }
+    return applestore[item] <= money;
+
 };
 
 
